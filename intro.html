@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Document</title>
+			</head>
+			<body>
+				<div id="app">
+    {{message}}
+    
+					<input type="text" v-model="message"/>
+					<alert-box></alert-box>
+					<alert-box></alert-box>
+					<alert-box></alert-box>
+				</div>
+				<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+				<script>
+    // All components must be declared before we can create the Vue app
+
+    Vue.component('alert-box', {
+        data: function() {
+            return {
+                "text":"She sells seashells by the seashore"
+            }
+        },
+        template:`
+					<div class="alert">{{text}}</div>`
+    })
+    
+				</script>
+			</body>
+		</html>
